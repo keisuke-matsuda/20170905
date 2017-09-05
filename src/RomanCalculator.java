@@ -23,6 +23,34 @@ public class RomanCalculator {
 	final static String ERR_MSG_1 = "変換できません";
 	final static String SUCCESS_MSG_1 = "SUCCESS";
 
+	public static String add(String augend,String addend){
+		int augendInt = RomToArab(augend);
+		int addendInt = RomToArab(addend);
+
+		return ArabToRom(augendInt + addendInt);
+	}
+
+	public static String sub(String minuend,String substrahend){
+		int minuendInt = RomToArab(minuend);
+		int substrahendInt = RomToArab(substrahend);
+
+		return ArabToRom(minuendInt - substrahendInt);
+	}
+
+	public static String mul(String multiplicand,String multiplier){
+		int multiplicandInt = RomToArab(multiplicand);
+		int multiplierInt = RomToArab(multiplier);
+
+		return ArabToRom(multiplicandInt * multiplierInt);
+	}
+
+	public static String div(String dividend,String divisor){
+		int dividendInt = RomToArab(dividend);
+		int divisorInt = RomToArab(divisor);
+
+		return ArabToRom(dividendInt / divisorInt);
+	}
+
 	public static String ArabToRom(int arabiaNum) {
 
 		String result = "";
@@ -104,7 +132,7 @@ public class RomanCalculator {
 
 	public static int ChangeToInt(String rome) {
 		switch (rome) {
-		case "I": 
+		case "I":
 			return 1;
 		case "V":
 			return 5;

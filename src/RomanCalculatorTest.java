@@ -20,7 +20,7 @@ public class RomanCalculatorTest {
 	public void test1() {
 		assertEquals(1,RomanCalculator.RomToArab("IIYYYYY"));
 	}
-	
+
 	@Test
 	public void test2() {
 		assertEquals(1,RomanCalculator.ChangeToInt("I"));
@@ -31,7 +31,7 @@ public class RomanCalculatorTest {
 		assertEquals(500,RomanCalculator.ChangeToInt("D"));
 		assertEquals(1000,RomanCalculator.ChangeToInt("M"));
 	}
-	
+
 	@Test
 	public void test3() {
 		assertEquals(1,RomanCalculator.RomToArab("I"));
@@ -39,6 +39,15 @@ public class RomanCalculatorTest {
 		assertEquals(4,RomanCalculator.RomToArab("IV"));
 		assertEquals(42,RomanCalculator.RomToArab("XLII"));
 		assertEquals(387,RomanCalculator.RomToArab("CCCLXXXVII"));
+	}
+
+	@Test
+	public void test4() {
+		assertEquals("CCCLXXXVII",RomanCalculator.add("CC","CLXXXVII"));
+		assertEquals("XIII",RomanCalculator.sub("CC","CLXXXVII"));
+		assertEquals("DC",RomanCalculator.mul("XL","XV"));
+		assertEquals("XXX",RomanCalculator.div("DC","XX"));
+
 	}
 }
 
